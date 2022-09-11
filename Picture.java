@@ -18,6 +18,9 @@ public class Picture
     private boolean drawn;
     private Square sky;
     private Circle sun;
+    private Circle ball;
+    private Triangle hat; 
+
 
     /**
      * Constructor for objects of class Picture
@@ -30,6 +33,8 @@ public class Picture
       sea = new Square();
       sky = new Square(); 
       sun = new Circle();
+      ball = new Circle();
+      hat = new Triangle(); 
    
     }
     /**
@@ -39,7 +44,7 @@ public class Picture
     {
         if(!drawn)  {
 
-        sky.changeColor("white");
+        sky.changeColor("skyblue");
         sky.moveHorizontal(-320);
         sky.moveVertical(-200);
         sky.changeSize(550);
@@ -63,12 +68,23 @@ public class Picture
 
 
         Dan.changeColor("red");
-        Dan.moveHorizontal(-90);
+        Dan.moveHorizontal(-120);
         Dan.makeVisible();
 
         Kyle.changeColor("red");
-        Kyle.moveHorizontal(30);
+        Kyle.moveHorizontal(50);
         Kyle.makeVisible();
+
+        hat.changeColor("black");
+        hat.changeSize(20,20);
+        hat.moveHorizontal(121);
+        hat.moveVertical(15);
+        hat.makeVisible();
+       
+
+        ball.changeColor("green");
+        ball.changeSize(30);
+        ball.makeVisible();
         drawn = true;
         }
 
@@ -92,7 +108,9 @@ public class Picture
      sea.changeColor("white");
      sand.changeColor("white");
      sun.changeColor("white");
-
+    sky.changeColor("white");
+    ball.changeColor("black");
+    hat.changeColor("balck");
     }
 
     /**
@@ -106,5 +124,8 @@ public class Picture
       sand.changeColor("yellow");
       sun.changeColor("yellow");
       sky.changeColor("white");
+      ball.changeColor("green");
+      hat.changeColor("green");
+      sky.changeColor("skyblue");
     }
 }
